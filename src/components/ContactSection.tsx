@@ -32,8 +32,8 @@ const ContactSection = () => {
     {
       icon: Linkedin,
       label: "LinkedIn",
-      username: "@savin-ss",
-      href: "https://linkedin.com/in/savin-ss",
+      username: "@savin-s-s",
+      href: "https://www.linkedin.com/in/savin-s-s/",
       color: "hover:text-[#0077B5]",
       gradient: "bg-gradient-to-r from-[#0077B5] to-[#00A0DC]"
     },
@@ -41,7 +41,7 @@ const ContactSection = () => {
       icon: Github,
       label: "GitHub",
       username: "@savin-ss",
-      href: "https://github.com/savin-ss",
+      href: "https://github.com/savin-ss/",
       color: "hover:text-foreground",
       gradient: "bg-gradient-to-r from-gray-700 to-gray-900"
     },
@@ -55,9 +55,9 @@ const ContactSection = () => {
     },
     {
       icon: Mail,
-      label: "Twitter",
-      username: "@savin_cyberai",
-      href: "https://twitter.com/savin_cyberai",
+      label: "Email",
+      username: "savinsreenu588@gmail.com",
+      href: "mailto:savinsreenu588@gmail.com",
       color: "hover:text-[#1DA1F2]",
       gradient: "bg-gradient-to-r from-[#1DA1F2] to-[#1991DB]"
     }
@@ -95,7 +95,11 @@ const ContactSection = () => {
             </CardHeader>
             <CardContent className="space-y-4">
               {contactInfo.map((contact, index) => (
-                <div key={index} className="flex items-center gap-3 group cursor-pointer hover:bg-muted/20 p-2 rounded-md transition-all">
+                <div 
+                  key={index} 
+                  className="flex items-center gap-3 group cursor-pointer hover:bg-muted/20 p-2 rounded-md transition-all"
+                  onClick={() => contact.href !== '#' && window.open(contact.href, '_blank')}
+                >
                   <contact.icon className={`h-4 w-4 ${contact.color} group-hover:scale-110 transition-transform`} />
                   <div className="flex-1">
                     <p className="text-sm text-muted-foreground">{contact.label}</p>
@@ -116,7 +120,7 @@ const ContactSection = () => {
             </CardHeader>
             <CardContent className="space-y-3">
               {socialLinks.map((social, index) => (
-                <div key={index} className="flex items-center justify-between p-3 rounded-md bg-muted/10 hover:bg-muted/20 transition-all group">
+                <div key={index} className="flex items-center justify-between p-3 rounded-md bg-muted/10 hover:bg-muted/20 transition-all group cursor-pointer" onClick={() => window.open(social.href, '_blank')}>
                   <div className="flex items-center gap-3">
                     <social.icon className={`h-4 w-4 ${social.color} group-hover:scale-110 transition-transform`} />
                     <div>
@@ -145,15 +149,27 @@ const ContactSection = () => {
               </CardTitle>
             </CardHeader>
             <CardContent className="space-y-3">
-              <Button variant="cyber" className="w-full justify-start">
+              <Button 
+                variant="cyber" 
+                className="w-full justify-start"
+                onClick={() => window.open('https://docs.google.com/document/d/1zNIvJRuPAf0BcyCfILBY6_cLF4tpsiUz/edit?usp=sharing&ouid=113252526299384239046&rtpof=true&sd=true', '_blank')}
+              >
                 <Calendar className="mr-2 h-4 w-4" />
-                Schedule Meeting
+                View Resume
               </Button>
-              <Button variant="outline-cyber" className="w-full justify-start">
+              <Button 
+                variant="outline-cyber" 
+                className="w-full justify-start"
+                onClick={() => window.open('https://github.com/savin-ss/', '_blank')}
+              >
                 <Github className="mr-2 h-4 w-4" />
                 View Projects
               </Button>
-              <Button variant="tech" className="w-full justify-start">
+              <Button 
+                variant="tech" 
+                className="w-full justify-start"
+                onClick={() => window.open('mailto:savinsreenu588@gmail.com', '_blank')}
+              >
                 <Mail className="mr-2 h-4 w-4" />
                 Send Message
               </Button>
@@ -189,13 +205,23 @@ const ContactSection = () => {
             Whether you're interested in AI research, need a full-stack solution, or want to discuss cybersecurity innovations, I'm always excited to connect with fellow innovators.
           </p>
           <div className="flex flex-wrap justify-center gap-4">
-            <Button variant="secondary" size="lg" className="bg-background text-foreground hover:bg-background/90">
+            <Button 
+              variant="secondary" 
+              size="lg" 
+              className="bg-background text-foreground hover:bg-background/90"
+              onClick={() => window.open('mailto:savinsreenu588@gmail.com', '_blank')}
+            >
               <Mail className="mr-2 h-4 w-4" />
               Start Conversation
             </Button>
-            <Button variant="outline" size="lg" className="border-primary-foreground text-primary-foreground hover:bg-primary-foreground hover:text-primary">
+            <Button 
+              variant="outline" 
+              size="lg" 
+              className="border-primary-foreground text-primary-foreground hover:bg-primary-foreground hover:text-primary"
+              onClick={() => window.open('https://www.linkedin.com/in/savin-s-s/', '_blank')}
+            >
               <Calendar className="mr-2 h-4 w-4" />
-              Book Meeting
+              Connect on LinkedIn
             </Button>
           </div>
         </div>

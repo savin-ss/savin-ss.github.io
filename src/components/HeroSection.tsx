@@ -57,11 +57,21 @@ const HeroSection = () => {
 
             {/* Action Buttons */}
             <div className="flex flex-wrap gap-4">
-              <Button variant="cyber" size="lg" className="group">
+              <Button 
+                variant="cyber" 
+                size="lg" 
+                className="group"
+                onClick={() => window.open('https://docs.google.com/document/d/1zNIvJRuPAf0BcyCfILBY6_cLF4tpsiUz/edit?usp=sharing&ouid=113252526299384239046&rtpof=true&sd=true', '_blank')}
+              >
                 <FileText className="mr-2 h-4 w-4 group-hover:rotate-12 transition-transform" />
                 View Resume
               </Button>
-              <Button variant="outline-cyber" size="lg" className="group">
+              <Button 
+                variant="outline-cyber" 
+                size="lg" 
+                className="group"
+                onClick={() => window.open('https://github.com/savin-ss/', '_blank')}
+              >
                 <Github className="mr-2 h-4 w-4 group-hover:scale-110 transition-transform" />
                 GitHub Profile
               </Button>
@@ -69,16 +79,36 @@ const HeroSection = () => {
 
             {/* Social Links */}
             <div className="flex space-x-4">
-              <Button variant="ghost" size="icon" className="hover:text-primary hover:shadow-glow-primary">
+              <Button 
+                variant="ghost" 
+                size="icon" 
+                className="hover:text-primary hover:shadow-glow-primary"
+                onClick={() => window.open('https://www.linkedin.com/in/savin-s-s/', '_blank')}
+              >
                 <Linkedin className="h-5 w-5" />
               </Button>
-              <Button variant="ghost" size="icon" className="hover:text-primary hover:shadow-glow-primary">
+              <Button 
+                variant="ghost" 
+                size="icon" 
+                className="hover:text-primary hover:shadow-glow-primary"
+                onClick={() => window.open('mailto:savinsreenu588@gmail.com', '_blank')}
+              >
                 <Mail className="h-5 w-5" />
               </Button>
-              <Button variant="ghost" size="icon" className="hover:text-primary hover:shadow-glow-primary">
+              <Button 
+                variant="ghost" 
+                size="icon" 
+                className="hover:text-primary hover:shadow-glow-primary"
+                onClick={() => window.open('https://www.youtube.com/@savintechhacks', '_blank')}
+              >
                 <Youtube className="h-5 w-5" />
               </Button>
-              <Button variant="ghost" size="icon" className="hover:text-primary hover:shadow-glow-primary">
+              <Button 
+                variant="ghost" 
+                size="icon" 
+                className="hover:text-primary hover:shadow-glow-primary"
+                onClick={() => window.open('https://github.com/savin-ss/', '_blank')}
+              >
                 <Github className="h-5 w-5" />
               </Button>
             </div>

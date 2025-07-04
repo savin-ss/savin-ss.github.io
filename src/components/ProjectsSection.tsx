@@ -118,14 +118,29 @@ const ProjectsSection = () => {
                   ))}
                 </div>
                 <div className="flex gap-2 pt-2">
-                  <Button variant="outline" size="sm" className="flex-1 group/btn">
+                  <Button 
+                    variant="outline" 
+                    size="sm" 
+                    className="flex-1 group/btn"
+                    onClick={() => window.open('https://github.com/savin-ss/', '_blank')}
+                  >
                     <Play className="w-3 h-3 mr-1 group-hover/btn:scale-110 transition-transform" />
                     Demo
                   </Button>
-                  <Button variant="ghost" size="sm" className="group/btn">
+                  <Button 
+                    variant="ghost" 
+                    size="sm" 
+                    className="group/btn"
+                    onClick={() => window.open('https://github.com/savin-ss/', '_blank')}
+                  >
                     <Github className="w-3 h-3 group-hover/btn:rotate-12 transition-transform" />
                   </Button>
-                  <Button variant="ghost" size="sm" className="group/btn">
+                  <Button 
+                    variant="ghost" 
+                    size="sm" 
+                    className="group/btn"
+                    onClick={() => window.open('https://github.com/savin-ss/', '_blank')}
+                  >
                     <ExternalLink className="w-3 h-3 group-hover/btn:scale-110 transition-transform" />
                   </Button>
                 </div>

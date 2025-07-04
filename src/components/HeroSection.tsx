@@ -75,6 +75,15 @@ const HeroSection = () => {
                 <Github className="mr-2 h-4 w-4 group-hover:scale-110 transition-transform" />
                 GitHub Profile
               </Button>
+              <Button 
+                variant="tech" 
+                size="lg" 
+                className="group"
+                onClick={() => window.open('https://www.linkedin.com/in/savin-s-s/', '_blank')}
+              >
+                <Linkedin className="mr-2 h-4 w-4 group-hover:scale-110 transition-transform" />
+                LinkedIn Profile
+              </Button>
             </div>
 
             {/* Social Links */}
